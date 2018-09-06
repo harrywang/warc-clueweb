@@ -90,7 +90,7 @@ class WARCHeader(CaseInsensitiveDict):
     def write_to(self, f):
         """Writes this header to a file, in the format specified by WARC.
         """
-        f.write(self.version + "\r\n")
+        f.write(self.version + "\n")
         for name, value in self.items():
             name = name.title()
             # Use standard forms for commonly used patterns
@@ -98,7 +98,7 @@ class WARCHeader(CaseInsensitiveDict):
             f.write(name)
             f.write(": ")
             f.write(value)
-            f.write("\r\n")
+            f.write("\n")
         
         # Header ends with an extra CRLF
         f.write("\r\n")
