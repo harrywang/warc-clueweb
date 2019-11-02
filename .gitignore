@@ -4,3 +4,7 @@ docs/_build/
 build/
 .coverage
 htmlcov/
+
+venv/
+dist/
+.DS_Store
